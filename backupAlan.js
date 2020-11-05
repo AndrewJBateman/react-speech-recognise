@@ -23,7 +23,7 @@ intent('Give me the news from $(source* (.*))', (p)=> {
 
         savedArticles = articles;
 
-        p.play({ command: 'newHeadlines', articles });
+        p.play({ command: 'newsHeadlines', articles });
         p.play(`Here are the (latest|recent) ${p.source.value}.`);
 
         p.play('Would you like me to read the headlines?');
@@ -33,7 +33,7 @@ intent('Give me the news from $(source* (.*))', (p)=> {
 })
 
 // News by Term
-intent('What\'s up with $(term* (.*))', (p)=> {
+intent('What\'s up with $(term* (.*))', (p)  => {
     let NEWS_API_URL = `https://newsapi.org/v2/everything?apiKey=${API_KEY}`;
 
     if(p.term.value) {
@@ -50,7 +50,7 @@ intent('What\'s up with $(term* (.*))', (p)=> {
 
         savedArticles = articles;
 
-        p.play({ command: 'newHeadlines', articles });
+        p.play({ command: 'newsHeadlines', articles });
         p.play(`Here are the (latest|recent) articles on ${p.term.value}.`);
 
         p.play('Would you like me to read the headlines?');
@@ -81,7 +81,7 @@ intent(`(show|what is|tell me|what's|what are|what're|read) (the|) (recent|lates
 
         savedArticles = articles;
 
-        p.play({ command: 'newHeadlines', articles });
+        p.play({ command: 'newsHeadlines', articles });
 
         if(p.C.value) {
             p.play(`Here are the (latest|recent) articles on ${p.C.value}.`);
@@ -105,4 +105,15 @@ const confirmation = context(() => {
     intent('no', (p) => {
         p.play('Sure, sounds good to me.')
     })
+})
+
+intent('open (the|) (article|) (number|) $(number* (.*))', (p) => {
+    if(p.number.value) {
+        p.play({ command: 'open', number: p.number.value, articles: savedArticles})
+    }
+})
+
+intent('(go|) back', (p) => {
+    p.play('OK, going back');
+    p.play({ command: 'newsHeadlines', articles: []});
 })

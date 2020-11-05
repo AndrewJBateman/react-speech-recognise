@@ -19,7 +19,7 @@
 
 ## :books: General info
 
-* tba
+* [Alan AI free interactions](https://studio.alan.app/billing) quantity has changed from what is shown in the Youtube tutorial. Only 50 free interactions now. Promo code? You can increase your interactions quota by starring their [9 pinned repos in Github](https://github.com/alan-ai)
 
 ## :camera: Screenshots
 
@@ -51,11 +51,12 @@
 ## :cool: Features
 
 * @material-ui components save a lot of time with ready-made cards etc.
+* Alan AI Voice Assistant has cool features. These include a library of predefined scripts, including weather, bitcoin, translator etc. The Smalltalk predefined script was added, that 'gives responses to casual conversation'.
 
 ## :clipboard: Status & To-do list
 
-* Status: Incomplete
-* To-do: complete tutorial and document
+* Status: Nearly complete - grid layout of news cards is not correct
+* To-do: Fix grid, test and document
 
 ## :clap: Inspiration
 

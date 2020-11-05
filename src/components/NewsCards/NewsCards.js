@@ -1,33 +1,32 @@
 import React from 'react';
 import { Grid, Grow, Typography } from '@material-ui/core';
 
-import NewsCard from '../NewsCard/NewsCard';
+import NewsCard from './NewsCard/NewsCard';
 import useStyles from './styles.js';
 
 const infoCards = [
 	{ color: '#00838f', title: 'Latest News', text: 'Give me the latest news' },
 	{
 		color: '#1565c0',
-		title: 'News by Categories',
-		info:
-			'Business, Entertainment, General, Health, Science, Sports, Technology',
+		title: 'News by Category',
+		info:	'Business, Entertainment, General, Health, Science, Sports, Technology',
 		text: 'Give me the latest Technology news',
 	},
 	{
 		color: '#4527a0',
-		title: 'News by Terms',
+		title: 'News by Search',
 		info: 'Bitcoin, PlayStation 5, Smartphones, Donald Trump...',
 		text: "What's up with PlayStation 5",
 	},
 	{
 		color: '#283593',
-		title: 'News by Sources',
+		title: 'News by Source',
 		info: 'CNN, Wired, BBC News, Time, IGN, Buzzfeed, ABC News...',
 		text: 'Give me the news from CNN',
 	},
 ];
 
-const NewsCards = ({ articles }) => {
+const NewsCards = ({ articles, activeArticle }) => {
 	const classes = useStyles();
 
 	if (!articles.length) {
@@ -82,7 +81,6 @@ const NewsCards = ({ articles }) => {
 			>
 				{articles.map((article, i) => (
 					<grid
-						key={i}
 						item
 						xs={12}
 						sm={6}
@@ -90,7 +88,7 @@ const NewsCards = ({ articles }) => {
 						lg={3}
 						style={{ display: 'flex' }}
 					>
-						<NewsCard article={article} i={i} />
+						<NewsCard article={article} activeArticle={activeArticle} i={i} />
 					</grid>
 				))}
 			</Grid>
