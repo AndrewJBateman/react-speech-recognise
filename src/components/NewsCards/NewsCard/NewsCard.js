@@ -8,7 +8,6 @@ import {
 	Button,
 	Typography,
 } from '@material-ui/core';
-// import classNames from 'classNames';
 
 import useStyles from './styles';
 
@@ -43,7 +42,7 @@ const NewsCard = ({
 	return (
 		<Card
 			ref={elRefs[i]}
-			className={ activeArticle === i ? classes.activeCard : classes.card}
+			className={ activeArticle === i ? classes.activeCard : classes.card }
 		>
 			<CardActionArea href={url} target="_blank">
 				<CardMedia

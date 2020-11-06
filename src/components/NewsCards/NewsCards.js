@@ -9,8 +9,9 @@ const infoCards = [
 	{
 		color: '#1565c0',
 		title: 'News by Category',
-		info:	'Business, Entertainment, General, Health, Science, Sports, Technology',
-		text: 'Give me the latest Technology news',
+		info:
+			'Business, Entertainment, General, Health, Science, Sports, Technology',
+		text: 'Give me the latest Tech news',
 	},
 	{
 		color: '#4527a0',
@@ -80,16 +81,9 @@ const NewsCards = ({ articles, activeArticle }) => {
 				spacing={3}
 			>
 				{articles.map((article, i) => (
-					<grid
-						item
-						xs={12}
-						sm={6}
-						md={4}
-						lg={3}
-						style={{ display: 'flex' }}
-					>
-						<NewsCard article={article} activeArticle={activeArticle} i={i} />
-					</grid>
+					<Grid item xs={12} sm={6} md={4} lg={3} style={{ display: 'flex' }}>
+						<NewsCard activeArticle={activeArticle} i={i} article={article} />
+					</Grid>
 				))}
 			</Grid>
 		</Grow>
