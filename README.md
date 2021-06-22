@@ -2,6 +2,12 @@
 
 * React app using the [Alan Conversational Voice AI Platform](https://alan.app/platform) to get news from the [News API](https://newsapi.org/)
 * Code from an excellent tutorial by [JavaScript Mastery](https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A) - see [:clap: Inspiration](#clap-inspiration) below. I have made a few minor changes.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
+
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/react-speech-recognise?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/react-speech-recognise?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/react-speech-recognise?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/react-speech-recognise?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -87,6 +93,10 @@ api.request(NEWS_API_URL, (error, response, body) => {
 
 * [Javascript Mastery: Youtube: Build a Voice Recognition React News Application - Alan AI Voice Assistant](https://www.youtube.com/watch?v=rqw3OftE5sA)
 
+## :file_folder: License
+
+* N/A
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
